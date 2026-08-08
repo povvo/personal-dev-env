@@ -1,0 +1,868 @@
+{
+  "schemaVersion": 1,
+  "catalogueVersion": "2026.08.08.1",
+  "defaultPlatform": "wsl",
+  "profiles": [
+    {
+      "id": "python",
+      "title": "Python engineering",
+      "tier": "PROFILE",
+      "size": "S",
+      "triggers": {
+        "files": [
+          "pyproject.toml"
+        ],
+        "extensions": [
+          ".py",
+          ".pyi"
+        ]
+      },
+      "wsl": {
+        "mise": [],
+        "uv": [
+          "ruff==0.16.2",
+          "nox==2026.7.11",
+          "mypy==2.3.0",
+          "pip-audit==2.10.1",
+          "bandit==1.9.4"
+        ],
+        "npm": []
+      },
+      "windows": {
+        "winget": []
+      },
+      "services": [],
+      "notes": [
+        "Frameworks, libraries, and test runners remain project-local."
+      ]
+    },
+    {
+      "id": "typescript",
+      "title": "TypeScript and JavaScript",
+      "tier": "PROFILE",
+      "size": "S",
+      "triggers": {
+        "files": [
+          "package.json"
+        ],
+        "extensions": [
+          ".ts",
+          ".tsx",
+          ".js",
+          ".jsx",
+          ".mjs",
+          ".cjs"
+        ]
+      },
+      "wsl": {
+        "mise": [],
+        "uv": [],
+        "npm": [
+          "cspell@10.0.1"
+        ]
+      },
+      "windows": {
+        "winget": []
+      },
+      "services": [],
+      "notes": [
+        "Compilers, formatters, test runners, and frameworks remain project-local."
+      ]
+    },
+    {
+      "id": "browser-automation",
+      "title": "Browser automation",
+      "tier": "ON-DEMAND",
+      "size": "L",
+      "triggers": {
+        "files": [
+          "playwright.config.ts",
+          "playwright.config.js"
+        ],
+        "extensions": []
+      },
+      "wsl": {
+        "mise": [],
+        "uv": [],
+        "npm": [
+          "playwright@1.62.1"
+        ]
+      },
+      "windows": {
+        "winget": []
+      },
+      "services": [],
+      "notes": [
+        "Browser binaries require a separate explicit action."
+      ]
+    },
+    {
+      "id": "rust",
+      "title": "Rust",
+      "tier": "PROFILE",
+      "size": "M",
+      "triggers": {
+        "files": [
+          "Cargo.toml",
+          "rust-toolchain.toml"
+        ],
+        "extensions": [
+          ".rs"
+        ]
+      },
+      "wsl": {
+        "mise": [
+          "rust@1.97.1"
+        ],
+        "uv": [],
+        "npm": []
+      },
+      "windows": {
+        "winget": []
+      },
+      "services": [],
+      "notes": [
+        "Cargo dependencies remain project-local."
+      ]
+    },
+    {
+      "id": "go",
+      "title": "Go",
+      "tier": "PROFILE",
+      "size": "M",
+      "triggers": {
+        "files": [
+          "go.mod",
+          "go.work"
+        ],
+        "extensions": [
+          ".go"
+        ]
+      },
+      "wsl": {
+        "mise": [
+          "go@1.26.5"
+        ],
+        "uv": [],
+        "npm": []
+      },
+      "windows": {
+        "winget": []
+      },
+      "services": [],
+      "notes": [
+        "Module dependencies remain project-local."
+      ]
+    },
+    {
+      "id": "cpp",
+      "title": "C and C++",
+      "tier": "PROFILE",
+      "size": "L",
+      "triggers": {
+        "files": [
+          "CMakeLists.txt",
+          "conanfile.py",
+          "conanfile.txt",
+          "vcpkg.json"
+        ],
+        "extensions": [
+          ".c",
+          ".cc",
+          ".cpp",
+          ".cxx",
+          ".h",
+          ".hpp"
+        ]
+      },
+      "wsl": {
+        "mise": [
+          "cmake@4.4.2",
+          "ninja@1.13.2"
+        ],
+        "uv": [
+          "conan==2.31.2"
+        ],
+        "npm": []
+      },
+      "windows": {
+        "winget": []
+      },
+      "services": [],
+      "notes": [
+        "Large compilers and SDK variants belong in a Dev Container."
+      ]
+    },
+    {
+      "id": "jvm",
+      "title": "JVM",
+      "tier": "PROFILE",
+      "size": "L",
+      "triggers": {
+        "files": [
+          "pom.xml",
+          "build.gradle",
+          "build.gradle.kts",
+          "gradlew",
+          "mvnw"
+        ],
+        "extensions": [
+          ".java",
+          ".kt",
+          ".kts"
+        ]
+      },
+      "wsl": {
+        "mise": [
+          "java@temurin-25.0.4+7.0.LTS",
+          "maven@3.9.16",
+          "gradle@9.7.0"
+        ],
+        "uv": [],
+        "npm": []
+      },
+      "windows": {
+        "winget": []
+      },
+      "services": [],
+      "notes": [
+        "Prefer repository wrappers."
+      ]
+    },
+    {
+      "id": "dotnet",
+      "title": ".NET",
+      "tier": "PROFILE",
+      "size": "L",
+      "triggers": {
+        "files": [
+          "global.json"
+        ],
+        "extensions": [
+          ".sln",
+          ".slnx",
+          ".csproj",
+          ".fsproj",
+          ".cs",
+          ".fs"
+        ]
+      },
+      "wsl": {
+        "mise": [
+          "dotnet@10.0.302"
+        ],
+        "uv": [],
+        "npm": []
+      },
+      "windows": {
+        "winget": []
+      },
+      "services": [],
+      "notes": [
+        "NuGet dependencies remain project-governed."
+      ]
+    },
+    {
+      "id": "ruby",
+      "title": "Ruby",
+      "tier": "PROFILE",
+      "size": "M",
+      "triggers": {
+        "files": [
+          "Gemfile",
+          ".ruby-version"
+        ],
+        "extensions": [
+          ".rb"
+        ]
+      },
+      "wsl": {
+        "mise": [
+          "ruby@4.0.6"
+        ],
+        "uv": [],
+        "npm": []
+      },
+      "windows": {
+        "winget": []
+      },
+      "services": [],
+      "notes": [
+        "Bundler dependencies remain project-local."
+      ]
+    },
+    {
+      "id": "php",
+      "title": "PHP",
+      "tier": "PROFILE",
+      "size": "M",
+      "triggers": {
+        "files": [
+          "composer.json"
+        ],
+        "extensions": [
+          ".php"
+        ]
+      },
+      "wsl": {
+        "mise": [
+          "php@8.5.9"
+        ],
+        "uv": [],
+        "npm": []
+      },
+      "windows": {
+        "winget": []
+      },
+      "services": [],
+      "notes": [
+        "Composer and application dependencies remain project-local; use the repository Dev Container when Composer is required."
+      ]
+    },
+    {
+      "id": "lua",
+      "title": "Lua",
+      "tier": "PROFILE",
+      "size": "S",
+      "triggers": {
+        "files": [
+          "rockspec",
+          ".luacheckrc"
+        ],
+        "extensions": [
+          ".lua"
+        ]
+      },
+      "wsl": {
+        "mise": [
+          "lua@5.5.1"
+        ],
+        "uv": [],
+        "npm": []
+      },
+      "windows": {
+        "winget": []
+      },
+      "services": [],
+      "notes": [
+        "LuaRocks and project rocks remain repository-scoped; use the repository Dev Container when LuaRocks is required."
+      ]
+    },
+    {
+      "id": "databases",
+      "title": "Databases",
+      "tier": "ON-DEMAND",
+      "size": "L",
+      "triggers": {
+        "files": [
+          "docker-compose.yml",
+          "docker-compose.yaml",
+          "compose.yml",
+          "compose.yaml"
+        ],
+        "extensions": [
+          ".sql"
+        ]
+      },
+      "wsl": {
+        "mise": [],
+        "uv": [],
+        "npm": []
+      },
+      "windows": {
+        "winget": []
+      },
+      "services": [
+        "databases"
+      ],
+      "notes": [
+        "PostgreSQL and Valkey run as loopback-bound services; volumes survive teardown."
+      ]
+    },
+    {
+      "id": "data-science",
+      "title": "Data and science",
+      "tier": "ON-DEMAND",
+      "size": "XL",
+      "acknowledgements": [
+        "size"
+      ],
+      "triggers": {
+        "files": [
+          "environment.yml",
+          "environment.yaml"
+        ],
+        "extensions": [
+          ".ipynb",
+          ".parquet"
+        ]
+      },
+      "wsl": {
+        "mise": [],
+        "uv": [
+          "jupyterlab==4.6.2",
+          "marimo==0.23.16"
+        ],
+        "npm": []
+      },
+      "windows": {
+        "winget": []
+      },
+      "services": [],
+      "notes": [
+        "Scientific libraries stay project-local; datasets survive uninstall."
+      ]
+    },
+    {
+      "id": "local-ai-ollama",
+      "title": "Local AI with Ollama",
+      "tier": "ON-DEMAND",
+      "size": "XL",
+      "alternativeGroup": "local-ai-engine",
+      "conflicts": [
+        "local-ai-llamacpp"
+      ],
+      "acknowledgements": [
+        "size"
+      ],
+      "triggers": {
+        "files": [
+          "Modelfile"
+        ],
+        "extensions": [
+          ".gguf"
+        ]
+      },
+      "wsl": {
+        "mise": [
+          "ollama@0.31.2"
+        ],
+        "uv": [],
+        "npm": []
+      },
+      "windows": {
+        "winget": []
+      },
+      "services": [],
+      "notes": [
+        "No model weights are downloaded."
+      ]
+    },
+    {
+      "id": "local-ai-llamacpp",
+      "title": "Local AI with llama.cpp",
+      "tier": "ALTERNATIVE",
+      "size": "XL",
+      "alternativeGroup": "local-ai-engine",
+      "conflicts": [
+        "local-ai-ollama"
+      ],
+      "acknowledgements": [
+        "size"
+      ],
+      "triggers": {
+        "files": [],
+        "extensions": [
+          ".gguf"
+        ]
+      },
+      "wsl": {
+        "mise": [
+          "github:ggml-org/llama.cpp@b10322"
+        ],
+        "uv": [],
+        "npm": []
+      },
+      "windows": {
+        "winget": []
+      },
+      "services": [],
+      "notes": [
+        "One engine only; no model weights are downloaded."
+      ]
+    },
+    {
+      "id": "mcp-agents",
+      "title": "MCP and agents",
+      "tier": "PROFILE",
+      "size": "S",
+      "triggers": {
+        "files": [
+          "mcp.json",
+          ".mcp.json"
+        ],
+        "extensions": []
+      },
+      "wsl": {
+        "mise": [],
+        "uv": [],
+        "npm": [
+          "cspell@10.0.1",
+          "@modelcontextprotocol/inspector@2.1.0"
+        ]
+      },
+      "windows": {
+        "winget": []
+      },
+      "services": [],
+      "notes": [
+        "Inspect server code and configuration before execution."
+      ]
+    },
+    {
+      "id": "security",
+      "title": "Defensive security",
+      "tier": "ON-DEMAND",
+      "size": "L",
+      "acknowledgements": [
+        "authorized-scope"
+      ],
+      "triggers": {
+        "files": [
+          "semgrep.yml",
+          ".semgrep.yml",
+          "checkov.yml"
+        ],
+        "extensions": [
+          ".rego"
+        ]
+      },
+      "wsl": {
+        "mise": [
+          "opa@1.19.0",
+          "conftest@0.69.0"
+        ],
+        "uv": [
+          "semgrep==1.172.0",
+          "checkov==3.3.9"
+        ],
+        "npm": []
+      },
+      "windows": {
+        "winget": []
+      },
+      "services": [],
+      "notes": [
+        "Authorized defensive scope only; no offensive suite."
+      ]
+    },
+    {
+      "id": "platform-iac",
+      "title": "Platform and infrastructure as code",
+      "tier": "PROFILE",
+      "size": "M",
+      "triggers": {
+        "files": [
+          "main.tf",
+          "tofu.hcl",
+          "Pulumi.yaml"
+        ],
+        "extensions": [
+          ".tf",
+          ".hcl"
+        ]
+      },
+      "wsl": {
+        "mise": [
+          "opentofu@1.12.5",
+          "sops@3.13.3",
+          "age@1.3.1",
+          "act@0.2.89"
+        ],
+        "uv": [],
+        "npm": []
+      },
+      "windows": {
+        "winget": []
+      },
+      "services": [],
+      "notes": [
+        "Authentication, apply, and deployment require separate approval."
+      ]
+    },
+    {
+      "id": "kubernetes",
+      "title": "Kubernetes",
+      "tier": "ON-DEMAND",
+      "size": "L",
+      "triggers": {
+        "files": [
+          "Chart.yaml",
+          "kustomization.yaml",
+          "Tiltfile"
+        ],
+        "extensions": []
+      },
+      "wsl": {
+        "mise": [
+          "kubectl@1.36.3",
+          "helm@4.2.3",
+          "kustomize@5.8.1",
+          "kind@0.32.0"
+        ],
+        "uv": [],
+        "npm": []
+      },
+      "windows": {
+        "winget": []
+      },
+      "services": [],
+      "notes": [
+        "Cluster creation and cloud access are separate operations."
+      ]
+    },
+    {
+      "id": "observability",
+      "title": "Observability",
+      "tier": "ON-DEMAND",
+      "size": "L",
+      "triggers": {
+        "files": [
+          "otel-collector.yaml",
+          "prometheus.yml",
+          "prometheus.yaml"
+        ],
+        "extensions": []
+      },
+      "wsl": {
+        "mise": [],
+        "uv": [],
+        "npm": []
+      },
+      "windows": {
+        "winget": []
+      },
+      "services": [
+        "observability"
+      ],
+      "notes": [
+        "Services bind to loopback and volumes survive teardown."
+      ]
+    },
+    {
+      "id": "documentation",
+      "title": "Documentation",
+      "tier": "PROFILE",
+      "size": "M",
+      "triggers": {
+        "files": [
+          "mkdocs.yml",
+          "mkdocs.yaml",
+          ".markdownlint.json"
+        ],
+        "extensions": [
+          ".md",
+          ".mdx",
+          ".rst"
+        ]
+      },
+      "wsl": {
+        "mise": [],
+        "uv": [
+          "mkdocs==1.6.1"
+        ],
+        "npm": [
+          "markdownlint-cli2@0.23.2",
+          "cspell@10.0.1",
+          "@mermaid-js/mermaid-cli@11.16.0"
+        ]
+      },
+      "windows": {
+        "winget": []
+      },
+      "services": [],
+      "notes": [
+        "Plugins and themes remain project-local."
+      ]
+    },
+    {
+      "id": "media",
+      "title": "Media",
+      "tier": "ON-DEMAND",
+      "size": "L",
+      "triggers": {
+        "files": [],
+        "extensions": [
+          ".mp4",
+          ".mov",
+          ".mkv",
+          ".wav",
+          ".flac",
+          ".psd"
+        ]
+      },
+      "wsl": {
+        "mise": [],
+        "uv": [],
+        "npm": []
+      },
+      "windows": {
+        "winget": [
+          "Gyan.FFmpeg",
+          "ImageMagick.ImageMagick"
+        ]
+      },
+      "services": [],
+      "notes": [
+        "Large GUI editors require an explicit profile choice."
+      ]
+    },
+    {
+      "id": "embedded-hardware",
+      "title": "Embedded and hardware",
+      "tier": "ON-DEMAND",
+      "size": "XL",
+      "acknowledgements": [
+        "size"
+      ],
+      "triggers": {
+        "files": [
+          "platformio.ini"
+        ],
+        "extensions": [
+          ".ino"
+        ]
+      },
+      "wsl": {
+        "mise": [],
+        "uv": [
+          "platformio==6.1.19"
+        ],
+        "npm": []
+      },
+      "windows": {
+        "winget": []
+      },
+      "services": [],
+      "notes": [
+        "USB access, vendor SDKs, and drivers require review."
+      ]
+    },
+    {
+      "id": "mobile",
+      "title": "Mobile development",
+      "tier": "ON-DEMAND",
+      "size": "XL",
+      "acknowledgements": [
+        "size"
+      ],
+      "triggers": {
+        "files": [
+          "pubspec.yaml",
+          "AndroidManifest.xml"
+        ],
+        "extensions": [
+          ".dart",
+          ".swift"
+        ]
+      },
+      "wsl": {
+        "mise": [],
+        "uv": [],
+        "npm": []
+      },
+      "windows": {
+        "winget": [
+          "Google.AndroidStudio"
+        ]
+      },
+      "services": [],
+      "notes": [
+        "SDKs, emulators, and licenses need explicit setup and survive uninstall."
+      ]
+    },
+    {
+      "id": "cad",
+      "title": "CAD and electronics design",
+      "tier": "ON-DEMAND",
+      "size": "XL",
+      "acknowledgements": [
+        "size"
+      ],
+      "triggers": {
+        "files": [],
+        "extensions": [
+          ".kicad_pro",
+          ".FCStd",
+          ".scad",
+          ".step",
+          ".stl"
+        ]
+      },
+      "wsl": {
+        "mise": [],
+        "uv": [],
+        "npm": []
+      },
+      "windows": {
+        "winget": [
+          "KiCad.KiCad",
+          "FreeCAD.FreeCAD",
+          "OpenSCAD.OpenSCAD"
+        ]
+      },
+      "services": [],
+      "notes": [
+        "Libraries and manufacturing output stay project-scoped."
+      ]
+    },
+    {
+      "id": "game-development",
+      "title": "Game development",
+      "tier": "ON-DEMAND",
+      "size": "XL",
+      "acknowledgements": [
+        "size"
+      ],
+      "triggers": {
+        "files": [
+          "project.godot"
+        ],
+        "extensions": [
+          ".gd",
+          ".tscn",
+          ".tres"
+        ]
+      },
+      "wsl": {
+        "mise": [],
+        "uv": [],
+        "npm": []
+      },
+      "windows": {
+        "winget": [
+          "GodotEngine.GodotEngine"
+        ]
+      },
+      "services": [],
+      "notes": [
+        "Engine caches, import data, and assets survive uninstall."
+      ]
+    },
+    {
+      "id": "experimental-tooling",
+      "title": "Experimental tooling sandbox",
+      "tier": "EXPERIMENTAL",
+      "size": "M",
+      "acknowledgements": [
+        "experimental"
+      ],
+      "triggers": {
+        "files": [],
+        "extensions": []
+      },
+      "wsl": {
+        "mise": [],
+        "uv": [],
+        "npm": []
+      },
+      "windows": {
+        "winget": []
+      },
+      "services": [],
+      "notes": [
+        "No components are assumed; explicit acknowledgement is required."
+      ]
+    }
+  ]
+}

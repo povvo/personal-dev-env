@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "profile": "mobile",
+  "catalogueVersion": "2026.08.08.1",
+  "resolution": "exact-selectors",
+  "components": {
+    "mise": [],
+    "uv": [],
+    "npm": [],
+    "winget": [
+      "Google.AndroidStudio"
+    ],
+    "services": []
+  },
+  "preservedOnUninstall": [
+    "models",
+    "datasets",
+    "database volumes",
+    "browser caches",
+    "project outputs",
+    "WSL distributions",
+    "exports",
+    "archives",
+    "core tools",
+    "shared active tools"
+  ]
+}

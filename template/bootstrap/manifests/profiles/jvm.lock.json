@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "profile": "jvm",
+  "catalogueVersion": "2026.08.08.1",
+  "resolution": "exact-selectors",
+  "components": {
+    "mise": [
+      "java@temurin-25.0.4+7.0.LTS",
+      "maven@3.9.16",
+      "gradle@9.7.0"
+    ],
+    "uv": [],
+    "npm": [],
+    "winget": [],
+    "services": []
+  },
+  "preservedOnUninstall": [
+    "models",
+    "datasets",
+    "database volumes",
+    "browser caches",
+    "project outputs",
+    "WSL distributions",
+    "exports",
+    "archives",
+    "core tools",
+    "shared active tools"
+  ]
+}

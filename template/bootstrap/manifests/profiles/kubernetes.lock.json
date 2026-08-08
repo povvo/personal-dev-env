@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "profile": "kubernetes",
+  "catalogueVersion": "2026.08.08.1",
+  "resolution": "exact-selectors",
+  "components": {
+    "mise": [
+      "kubectl@1.36.3",
+      "helm@4.2.3",
+      "kustomize@5.8.1",
+      "kind@0.32.0"
+    ],
+    "uv": [],
+    "npm": [],
+    "winget": [],
+    "services": []
+  },
+  "preservedOnUninstall": [
+    "models",
+    "datasets",
+    "database volumes",
+    "browser caches",
+    "project outputs",
+    "WSL distributions",
+    "exports",
+    "archives",
+    "core tools",
+    "shared active tools"
+  ]
+}

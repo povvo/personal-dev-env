@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "profile": "documentation",
+  "catalogueVersion": "2026.08.08.1",
+  "resolution": "exact-selectors",
+  "components": {
+    "mise": [],
+    "uv": [
+      "mkdocs==1.6.1"
+    ],
+    "npm": [
+      "markdownlint-cli2@0.23.2",
+      "cspell@10.0.1",
+      "@mermaid-js/mermaid-cli@11.16.0"
+    ],
+    "winget": [],
+    "services": []
+  },
+  "preservedOnUninstall": [
+    "models",
+    "datasets",
+    "database volumes",
+    "browser caches",
+    "project outputs",
+    "WSL distributions",
+    "exports",
+    "archives",
+    "core tools",
+    "shared active tools"
+  ]
+}

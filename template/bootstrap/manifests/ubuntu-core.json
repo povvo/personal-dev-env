@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "distributionConfiguration": "environment.json",
+  "apt": [
+    "apt-transport-https",
+    "build-essential",
+    "ca-certificates",
+    "curl",
+    "file",
+    "git",
+    "git-lfs",
+    "gnupg",
+    "jq",
+    "less",
+    "locales",
+    "pkg-config",
+    "shellcheck",
+    "software-properties-common",
+    "sudo",
+    "unzip",
+    "xz-utils",
+    "zip"
+  ],
+  "dockerRepository": "https://download.docker.com/linux/ubuntu",
+  "dockerPackages": [
+    "docker-ce",
+    "docker-ce-cli",
+    "containerd.io",
+    "docker-buildx-plugin",
+    "docker-compose-plugin"
+  ],
+  "uvTools": ["pre-commit"],
+  "npmTools": ["@devcontainers/cli"]
+}

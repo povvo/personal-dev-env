@@ -1,0 +1,6 @@
+{
+  "schemaVersion": 1,
+  "distributionName": "Ubuntu-Dev",
+  "distributionSource": "Ubuntu-26.04",
+  "linuxUser": "developer"
+}

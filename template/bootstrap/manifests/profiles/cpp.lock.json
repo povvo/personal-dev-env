@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "profile": "cpp",
+  "catalogueVersion": "2026.08.08.1",
+  "resolution": "exact-selectors",
+  "components": {
+    "mise": [
+      "cmake@4.4.2",
+      "ninja@1.13.2"
+    ],
+    "uv": [
+      "conan==2.31.2"
+    ],
+    "npm": [],
+    "winget": [],
+    "services": []
+  },
+  "preservedOnUninstall": [
+    "models",
+    "datasets",
+    "database volumes",
+    "browser caches",
+    "project outputs",
+    "WSL distributions",
+    "exports",
+    "archives",
+    "core tools",
+    "shared active tools"
+  ]
+}

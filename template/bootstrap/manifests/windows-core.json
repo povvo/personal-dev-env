@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "channel": "stable",
+  "source": "winget",
+  "packages": [
+    { "id": "Microsoft.WindowsTerminal", "name": "Windows Terminal", "mode": "update-existing" },
+    { "id": "Microsoft.PowerShell", "name": "PowerShell 7", "mode": "update-existing" },
+    { "id": "Microsoft.VisualStudioCode", "name": "Visual Studio Code", "mode": "update-existing" },
+    { "id": "Git.Git", "name": "Git for Windows", "mode": "install" },
+    { "id": "GitHub.GitLFS", "name": "Git LFS", "mode": "install" },
+    { "id": "GitHub.cli", "name": "GitHub CLI", "mode": "install" },
+    { "id": "ajeetdsouza.zoxide", "name": "zoxide", "mode": "install" },
+    { "id": "Starship.Starship", "name": "Starship", "mode": "install" },
+    { "id": "twpayne.chezmoi", "name": "chezmoi", "mode": "install" }
+  ],
+  "vscodeExtensions": [
+    "ms-vscode-remote.remote-wsl",
+    "ms-vscode-remote.remote-containers"
+  ],
+  "preserve": [
+    "Existing Windows Node and Python installations",
+    "Git user.name and user.email",
+    "Unrelated applications and user configuration"
+  ]
+}

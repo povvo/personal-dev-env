@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "profile": "local-ai-llamacpp",
+  "catalogueVersion": "2026.08.08.1",
+  "resolution": "exact-selectors",
+  "components": {
+    "mise": [
+      "github:ggml-org/llama.cpp@b10322"
+    ],
+    "uv": [],
+    "npm": [],
+    "winget": [],
+    "services": []
+  },
+  "preservedOnUninstall": [
+    "models",
+    "datasets",
+    "database volumes",
+    "browser caches",
+    "project outputs",
+    "WSL distributions",
+    "exports",
+    "archives",
+    "core tools",
+    "shared active tools"
+  ]
+}

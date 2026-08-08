@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "profile": "mcp-agents",
+  "catalogueVersion": "2026.08.08.1",
+  "resolution": "exact-selectors",
+  "components": {
+    "mise": [],
+    "uv": [],
+    "npm": [
+      "cspell@10.0.1",
+      "@modelcontextprotocol/inspector@2.1.0"
+    ],
+    "winget": [],
+    "services": []
+  },
+  "preservedOnUninstall": [
+    "models",
+    "datasets",
+    "database volumes",
+    "browser caches",
+    "project outputs",
+    "WSL distributions",
+    "exports",
+    "archives",
+    "core tools",
+    "shared active tools"
+  ]
+}

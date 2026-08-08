@@ -1,0 +1,41 @@
+min_version = "2026.7.0"
+
+[settings]
+lockfile = true
+experimental = true
+python.uv_venv_auto = false
+
+[tools]
+node = "24"
+uv = "latest"
+ripgrep = "latest"
+fd = "latest"
+fzf = "latest"
+yq = "latest"
+ast-grep = "latest"
+just = "latest"
+bat = "latest"
+eza = "latest"
+delta = "latest"
+shfmt = "latest"
+lazygit = "latest"
+hyperfine = "latest"
+watchexec = "latest"
+"aqua:boyter/scc" = "latest"
+bottom = "latest"
+dust = "latest"
+"aqua:dalance/procs" = "latest"
+zoxide = "latest"
+starship = "latest"
+chezmoi = "latest"
+gitleaks = "latest"
+trivy = "latest"
+osv-scanner = "latest"
+syft = "latest"
+cosign = "latest"
+actionlint = "latest"
+hadolint = "latest"
+gh = "latest"
+
+[tools."npm:@devcontainers/cli"]
+version = "latest"

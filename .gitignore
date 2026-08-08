@@ -1,0 +1,36 @@
+# Generated environment evidence
+template/bootstrap/checksums/*
+template/bootstrap/inventories/*
+!template/bootstrap/checksums/.gitkeep
+!template/bootstrap/inventories/.gitkeep
+
+# Large or machine-specific state
+*.vhdx
+*.vhd
+*.wsl
+*.tar
+*.tar.gz
+*.zip
+*.7z
+*.iso
+*.log
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+credentials.json
+secrets.json
+
+# Editor and operating-system state
+.idea/
+.vs/
+*.user
+*.suo
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "profile": "security",
+  "catalogueVersion": "2026.08.08.1",
+  "resolution": "exact-selectors",
+  "components": {
+    "mise": [
+      "opa@1.19.0",
+      "conftest@0.69.0"
+    ],
+    "uv": [
+      "semgrep==1.172.0",
+      "checkov==3.3.9"
+    ],
+    "npm": [],
+    "winget": [],
+    "services": []
+  },
+  "preservedOnUninstall": [
+    "models",
+    "datasets",
+    "database volumes",
+    "browser caches",
+    "project outputs",
+    "WSL distributions",
+    "exports",
+    "archives",
+    "core tools",
+    "shared active tools"
+  ]
+}
